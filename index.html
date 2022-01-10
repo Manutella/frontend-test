@@ -8,16 +8,41 @@
     <title>Controle Financeiro</title>
 </head>
 <body>
-    
     <header>
-        <nav>
+        <nav class="menu-bar">
             <a href="/" class="logo">Controle Financeiro</a>
 
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
             <ul class="nav-list">
-                <li><a href="">Cadastro de transações</a></li>
-                <li><a href="">Limpar dados</a></li>
+                <li><a href="/"class="cad">Cadastro de transações</a ></li>
+                <li><a href="/">Limpar dados</a></li>
             </ul>
         </nav>
     </header>
+
+    <div class="trans-area">
+
+        <h2>Nova transação</h2>
+
+        <label for="trans-select">Tipo de transação:</label>
+        <select name="-trans-select" class="form">
+           <option value="1">Compra</option>
+           <option value="2">Venda</option>
+        </select>
+
+        <label for="merch-name" >Nome da mercadoria:</label>
+        <input type="text" name="merch-name" id="merch-name" class="form">
+
+        <label for="value">Valor:</label>
+        <input type="number" name="value" id="value" placeholder="R$0,00" class="form">
+
+        <button class="form" >Adicionar transação</button>
+    </div>
+
 </body>
 </html>
