@@ -101,3 +101,48 @@ button:hover{
 select{
     cursor: pointer;
 }
+
+.res-area{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    width: 680px;
+    height: 344px;
+    margin-top: 31px;
+    margin-left: 420px;
+
+    border: 1px solid #979797;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.merch{
+    border: 1px solid red;
+    width: 50%;
+    height: 100%;
+    top: 60px;
+    left: 20px;
+    padding: 30px 10px;
+}
+
+p{
+    border-top:  1px solid #979797;
+    padding-bottom: 20px;
+}
+
+.total{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    margin-top: 31px;
+    margin-left: 420px;
+    
+    border: 1px solid red;
+    width: 50%;
+    height: 100%;
+    top: 60px;
+    left: 20px;
+    padding: 30px 10px;
+}

@@ -25,24 +25,55 @@
         </nav>
     </header>
 
-    <div class="trans-area">
+    <div class="container">
+        <div class="trans-area">
 
-        <h2>Nova transação</h2>
+            <h2>Nova transação</h2>
 
-        <label for="trans-select">Tipo de transação:</label>
-        <select name="-trans-select" class="form">
-           <option value="1">Compra</option>
-           <option value="2">Venda</option>
-        </select>
+            <label for="trans-select">Tipo de transação:</label>
+            <select name="-trans-select" class="form">
+            <option value="1">Compra</option>
+            <option value="2">Venda</option>
+            </select>
 
-        <label for="merch-name" >Nome da mercadoria:</label>
-        <input type="text" name="merch-name" id="merch-name" class="form">
+            <label for="merch-name" >Nome da mercadoria:</label>
+            <input type="text" name="merch-name" id="merch-name" class="form">
 
-        <label for="value">Valor:</label>
-        <input type="number" name="value" id="value" placeholder="R$0,00" class="form">
+            <label for="value">Valor:</label>
+            <input type="number" name="value" id="value" placeholder="R$0,00" class="form">
 
-        <button class="form" >Adicionar transação</button>
+            <button class="form" >Adicionar transação</button>
+        </div>
+
+        <div class="res-area">
+            <h2>Extrato de transações </h2>
+
+            <div class="merch">
+                <h3>Mercadoria</h3>
+
+                <p> 
+                    + Lorem ipsum dolor sit amet consectetur   R$12.999,99 </p>
+
+                <p>
+                    - Quis nostrud exercitation R$99,99
+                </p>
+
+                <p>
+                    + Lorem ipsum R$9,99
+                </p>
+
+                <p>
+                    <h3>Total R$12.909,99 </h3>
+                </p>
+
+                
+
+                
+            </div>
+
+            
+        
+        </div>
     </div>
-
 </body>
 </html>
