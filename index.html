@@ -19,14 +19,14 @@
             </div>
 
             <ul class="nav-list">
-                <li><a href="/"class="cad">Cadastro de transações</a ></li>
-                <li><a href="/">Limpar dados</a></li>
+                <li><input type="button" value="Cadastro de transação" class="cad"> </li>
+                <li><input type="reset" value="Limpar dados" class="cad"></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
-        <div class="trans-area">
+        <form class="trans-area">
 
             <h2>Nova transação</h2>
 
@@ -37,15 +37,15 @@
             </select>
 
             <label for="merch-name" >Nome da mercadoria:</label>
-            <input type="text" name="merch-name" id="merch-name" class="form">
+            <input type="text" name="merch-name" required id="merch-name" class="form">
 
             <label for="value">Valor:</label>
-            <input type="number" name="value" id="value" placeholder="R$0,00" class="form">
+            <input type="number" name="value" id="value" placeholder="R$0,00" required  class="form">
 
-            <button class="form" >Adicionar transação</button>
+            <input type="submit" value="Adicionar transação" class="form" id="button">
 
             
-        </div>
+        </form>
 
         <div class="res-area">
             <h2>Extrato de transações </h2>
