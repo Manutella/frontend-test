@@ -57,7 +57,6 @@ li a:hover{
     height: 344px;
     margin-top: 31px;
     margin-left: 0;
-
     border: 2px solid #979797;
     border-radius: 4px;
 }
@@ -111,24 +110,27 @@ select{
     height: 344px;
     margin-top: 31px;
     margin-left: 420px;
-
-    border: 1px solid #979797;
     box-sizing: border-box;
     border-radius: 4px;
 }
 
 .merch{
-    border: 1px solid red;
-    width: 50%;
-    height: 100%;
+    width: 97%;
     top: 60px;
     left: 20px;
-    padding: 30px 10px;
+    padding: 20px 10px;
 }
 
 p{
     border-top:  1px solid #979797;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.num{
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    font-weight: 600;
 }
 
 .total{
@@ -138,8 +140,6 @@ p{
     position: absolute;
     margin-top: 31px;
     margin-left: 420px;
-    
-    border: 1px solid red;
     width: 50%;
     height: 100%;
     top: 60px;
