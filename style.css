@@ -23,7 +23,7 @@ ul{
     list-style-type: none;
     display: flex;
 }
-.mobile-menu, .fechar{
+.mobile-menu, .close{
     cursor: pointer;
     display: none;
 }
