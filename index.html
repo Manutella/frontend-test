@@ -33,21 +33,26 @@
 
             <h2>Nova transação</h2>
 
-            <label for="trans-select">Tipo de transação:</label>
-            <select name="-trans-select" class="form">
-            <option value="1">Compra</option>
-            <option value="2">Venda</option>
-            </select>
+            <div class="camp">
+                <div class="form short">
+                    <label for="trans-select">Tipo de transação:</label>
+                    <select name="-trans-select" class>
+                    <option value="1">Compra</option>
+                    <option value="2">Venda</option>
+                    </select>
+                </div>
+                <div class="form long">
+                    <label for="merch-name" >Nome da mercadoria:</label>
+                    <input type="text" name="merch-name" required id="merch-name" class>
+                </div>
+                <div class="form short">
+                    <label for="value">Valor:</label>
+                    <input type="number" name="value" id="value" placeholder="R$0,00" required  class>
+                </div>
+        </div>
 
-            <label for="merch-name" >Nome da mercadoria:</label>
-            <input type="text" name="merch-name" required id="merch-name" class="form">
+            <input type="submit" value="Adicionar transação"  id="button">
 
-            <label for="value">Valor:</label>
-            <input type="number" name="value" id="value" placeholder="R$0,00" required  class="form">
-
-            <input type="submit" value="Adicionar transação" class="form" id="button">
-
-            
         </form>
 
         <div class="res-area">

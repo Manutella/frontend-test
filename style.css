@@ -63,47 +63,67 @@ ul{
     text-decoration: none;
 }
 
+.container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px 15px;
+}
+
 .trans-area{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    position: absolute;
     width: 400px;
     height: 344px;
-    margin-top: 31px;
-    margin-left: 0;
+    margin-right: 15px;
     border: 2px solid #979797;
     border-radius: 4px;
 }
 
+.trans-area .camp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.form{
+    width: 100%;
+    margin-left: 22px;
+    padding: 5px 0;
+}
+
 h2{
-    font-size: 18px;
     font-style: normal;
     font-weight: bold;
     line-height: 122%;
     text-align: center;
 }
 
-.form {
-    margin-left: 3.72% ;
-    margin-right: 3.72%;
-    height: 32px;
-    width: 370px;
 
+.form input, select{
+    height: 32px;
+    width: 92%;
     border: 1px solid #979797;
     box-sizing: border-box;
     border-radius: 4px;
 
 }
 
-label{
-    margin-left: 3.72% ;
-    margin-right: 3.72%;
-}
 
 #button{
     background-color: #333;
     color: white;
+    border: 1px solid #333;
+    border-radius: 4px;
+    margin: 0 15px;
+    height: 32px;
+    width: 92%;
 }
 
 #button:hover{
@@ -116,24 +136,16 @@ select{
     cursor: pointer;
 }
 
+
+
 .res-area{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    position: absolute;
     width: 580px;
     height: 344px;
-    margin-top: 31px;
-    margin-left: 420px;
     box-sizing: border-box;
     border-radius: 4px;
-}
-
-.merch{
-    width: 97%;
-    top: 60px;
-    left: 20px;
-    padding: 20px 10px;
 }
 
 p{
@@ -148,21 +160,8 @@ p{
     font-weight: 600;
 }
 
-.total{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: absolute;
-    margin-top: 31px;
-    margin-left: 420px;
-    width: 50%;
-    height: 100%;
-    top: 60px;
-    left: 20px;
-    padding: 30px 10px;
-}
 
-@media(max-width:1100px){
+@media(max-width:768px){
     body{
         overflow: hidden;
     }
@@ -218,8 +217,18 @@ p{
     }
 
     .container .trans-area{
-        flex-direction: row;
-        width: 728px;
-        height: 189px ;
+        width: 90%;
+        height: 20vh;
+        justify-content: space-around;
+        margin: 0;
+    }
+
+    .trans-area .camp{
+        flex-direction: row;}
+
+
+    .res-area{
+        width: 90%;
+        height: 60%;
     }
 }
