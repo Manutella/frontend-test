@@ -4,7 +4,10 @@
     font-family: lato;
 }
 
-
+body{
+    display: flex;
+    flex-direction: column;
+}
 
 nav{
     display: flex;
@@ -16,22 +19,29 @@ nav{
     
 }
 
-a{
-    text-decoration: none;
-    
-}
-
-
-
 ul{
     list-style-type: none;
     display: flex;
-
-
+}
+.mobile-menu, .fechar{
+    cursor: pointer;
+    display: none;
 }
 
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: #333;
+    margin: 8px;
+}
+.divisor{
+    width: 1px;
+    height: 24px;
+    background-color: #979797;
+    margin-top: 10px;
+}
 
-.cad{
+.btn-bar{
     display: flex;
     font-size: 16px;
     font-weight: 600;
@@ -41,7 +51,7 @@ ul{
     border: 1px solid white;
 }
 
-.cad:hover{
+.btn-bar:hover{
     background-color: #333;
     color: white;
 }
@@ -50,6 +60,7 @@ ul{
     font-size: 24px;
     font-weight: 600;
     color: #333;
+    text-decoration: none;
 }
 
 .trans-area{
@@ -151,6 +162,64 @@ p{
     padding: 30px 10px;
 }
 
-.container{
-    margin: 0px 10%;
+@media(max-width:1100px){
+    body{
+        overflow: hidden;
+    }
+
+    .nav-list{
+        position: fixed;
+        flex-direction:column;
+        align-items: flex-end;
+        justify-content:flex-start;
+        width: 250px;
+        height: 1000px;
+        right: 0;
+        padding-top: 10vh;
+        background-color: #333;
+    }
+    .btn-bar{
+        width: 250px;
+        background-color: #333;
+        color: #e0e0e0;
+        border: none;
+    }
+
+    .fechar{
+        justify-content: first baseline;
+        color: #e0e0e0;
+        font-size: 45px;
+        
+    }
+    .btn-bar:hover{
+        background-color: #c4c4c4;
+        color: #333;
+    }
+
+    .divisor{
+        display: none;
+    }
+
+
+    .mobile-menu, .fechar{
+        display: block;
+    }
+
+    .nav-list{
+        display: none;
+    }
+    .menu:hover .nav-list{
+        display: flex;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .trans-area{
+        flex-direction: row;
+        width: 728px;
+        height: 189px ;
+    }
 }
