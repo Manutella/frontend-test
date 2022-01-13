@@ -89,7 +89,6 @@ ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 .form{
@@ -169,14 +168,23 @@ p{
     .nav-list{
         position: fixed;
         flex-direction:column;
-        align-items: flex-end;
         justify-content:flex-start;
-        width: 250px;
+        width: 35%;
         height: 1000px;
         right: 0;
         padding-top: 10vh;
         background-color: #333;
     }
+
+    .nav-list input{
+        width: 92%;
+        justify-content: end;
+    } 
+    
+    .nav-list{
+        display: none;
+    }
+
     .btn-bar{
         width: 250px;
         background-color: #333;
@@ -184,11 +192,11 @@ p{
         border: none;
     }
 
-    .fechar{
-        justify-content: first baseline;
+    .close{
+        margin: 15px;
         color: #e0e0e0;
-        font-size: 45px;
-        
+        font-size: 25px;
+        cursor: pointer;
     }
     .btn-bar:hover{
         background-color: #c4c4c4;
@@ -200,13 +208,11 @@ p{
     }
 
 
-    .mobile-menu, .fechar{
+    .mobile-menu {
         display: block;
     }
 
-    .nav-list{
-        display: none;
-    }
+    
     .menu:hover .nav-list{
         display: flex;
     }
@@ -214,6 +220,7 @@ p{
     .container{
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
     }
 
     .container .trans-area{
@@ -226,9 +233,46 @@ p{
     .trans-area .camp{
         flex-direction: row;}
 
+    #button{
+        width: 30%;
+        margin-left: 65%;
+    }
 
     .res-area{
         width: 90%;
         height: 60%;
+        margin-top: 20px;
     }
+}
+
+@media (max-width: 411px){
+
+    .nav-list{
+        width: 80%;
+    }
+
+    .container .trans-area{
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        height: 50%;
+        border: none;
+    }
+
+    .trans-area h2{
+        display: none;
+    }
+
+    .trans-area .camp{
+        flex-direction: column;
+    }
+
+    #button{
+        
+        margin: 10px 10px;
+        height: 32px;
+        width: 92%;
+    }
+
+
 }
