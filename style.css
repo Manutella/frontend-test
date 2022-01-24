@@ -73,7 +73,7 @@ ul{
     padding: 15px 15px;
 }
 
-.trans-area{
+.transation-area{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -84,7 +84,7 @@ ul{
     border-radius: 4px;
 }
 
-.trans-area .camp{
+.transation-area .camp{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -137,7 +137,7 @@ select{
 
 
 
-.res-area{
+.extract-area{
     display:flex;
     flex-direction: column;
     justify-content: space-around;
@@ -223,14 +223,14 @@ p{
         justify-content: space-between;
     }
 
-    .container .trans-area{
+    .container .transation-area{
         width: 90%;
         height: 20vh;
         justify-content: space-around;
         margin: 0;
     }
 
-    .trans-area .camp{
+    .transation-area .camp{
         flex-direction: row;}
 
     #button{
@@ -238,7 +238,7 @@ p{
         margin-left: 65%;
     }
 
-    .res-area{
+    .extract-area{
         width: 90%;
         height: 60%;
         margin-top: 20px;
@@ -251,7 +251,7 @@ p{
         width: 80%;
     }
 
-    .container .trans-area{
+    .container .transation-area{
         flex-direction: column;
         justify-content: space-around;
         width: 100%;
@@ -259,11 +259,11 @@ p{
         border: none;
     }
 
-    .trans-area h2{
+    .transation-area h2{
         display: none;
     }
 
-    .trans-area .camp{
+    .transation-area .camp{
         flex-direction: column;
     }
 
