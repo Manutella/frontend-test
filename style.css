@@ -1,21 +1,24 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
 body{
     display: flex;
     flex-direction: column;
-    margin:0;
-    padding: 0;
-    @font-face {
-        font-family: 'Lato';
-        src: url(./font/Lato);
-    }
+    
+    
 }
 
 .nav-bar{
 /*Barra de navegação*/
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 80px;
     width: 100%;
     background-color: #e0e0e0;
+    padding-right: 30px;
     
 }
 
@@ -31,7 +34,7 @@ a{
 
 .title-bar{
 /*Titulo 'Controle Financeiro'*/
-    width: 100%;
+    width: 50%;
 }
 
 ul{
@@ -61,12 +64,14 @@ ul{
 .btn-bar{
 /*Botões 'Cadastro...' e 'Limpar...' na barra de navegação*/
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
     font-weight: 600;
     color: #333;
-    width: 150px;
     height: 40px;
-    background-color: rgb(81, 204, 77);
+    background-color: rgb(255, 255, 255);
+    border:none;
 }
 
 .btn-bar:hover{
@@ -74,7 +79,13 @@ ul{
     color: white;
 }
 
+.btn-long{
+    width: 200px;
+}
 
+.btn-short{
+    width: 150px;
+}
 
 .container{
 /*div que contém .transation-area e .extract-area */
@@ -103,12 +114,10 @@ ul{
     margin-left: 15px;
 }
 
-
 .form{
 /*elementos dentro do formulario (inputs, labels, etc).*/
     padding: 5px 0;
 }
-
 
 
 h2{
@@ -175,10 +184,12 @@ tr .line{
     height: 34px;
 }
 
-@media(max-width:624px){
+@media(max-width:768px){
 
     .nav-bar{
         text-align: center;
+        justify-content: space-around;
+        padding-right: 0;
     }
 
     .logo{
@@ -189,34 +200,32 @@ tr .line{
         position: fixed;
         flex-direction:column;
         justify-content:flex-start;
-        width: 35%;
-        height: 1000px;
+        width: 15em;
+        height: 100%;
         right: 0;
-        padding-top: 10vh;
+        top: 0;
+        padding-top: 50px;
         background-color: #333;
     }
 
-    .menu-list span{
-        width: 92vh;
-        height: 400px;
-        justify-content: end;
-    } 
-    
     .menu-list{
         display: none;
     }
 
+
     .btn-bar{
         background-color: #333;
+        width: 100%;
         color: #e0e0e0;
         border: none;
     }
 
     .close{
-        margin: 15px;
+        margin: 20px;
         color: #e0e0e0;
         font-size: 25px;
         cursor: pointer;
+        text-align: left;
     }
     .btn-bar:hover{
         background-color: #c4c4c4;
@@ -287,7 +296,7 @@ tr .line{
     }
 }
 
-@media (max-width: 500px){
+@media (max-width: 414px){
 
     .logo{
         margin-left: 15px;

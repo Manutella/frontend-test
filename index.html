@@ -8,6 +8,14 @@
     <title>Controle Financeiro</title>
 </head>
 <body>
+    <style>
+        body{
+         @font-face {
+        font-family: 'Lato';
+        src: url(font/Lato-Regular.ttf);
+    }
+}
+    </style>
     <header>
         <nav class="nav-bar">
             
@@ -22,12 +30,11 @@
                     
                     <li><div class="close">X</div></li>
                 
-                    
-                    <div class="divisor"></div>
-                    
-                    <li><span class="btn-bar">Cadastro de Transações</span> </li>
+                    <li><button class="btn-bar btn-long">Cadastro de transação</button> </li>
 
-                    <li><span class="btn-bar">Limpar dados</span> </li>
+                    <li><div class="divisor"></div></li>
+
+                    <li><button class="btn-bar btn-short">Limpar dados</button> </li>
                 </ul>
 
                 <div class="mobile-menu">
@@ -57,7 +64,7 @@
                     <label for="merch-name" >Nome da mercadoria:</label>
                     <input type="text" name="merch-name" required id="merch-name">
                 </div>
-                <div class="form short">
+                <div class="form short value">
                     <label for="value">Valor:</label>
                     <input type="number" name="value" id="value" placeholder="R$0,00" required>
                 </div>
