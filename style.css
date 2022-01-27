@@ -3,7 +3,10 @@ body{
     flex-direction: column;
     margin:0;
     padding: 0;
-    font-family: 'lato';
+    @font-face {
+        font-family: 'Lato';
+        src: url(./font/Lato);
+    }
 }
 
 .nav-bar{
@@ -172,7 +175,7 @@ tr .line{
     height: 34px;
 }
 
-@media(max-width:600px){
+@media(max-width:624px){
 
     .nav-bar{
         text-align: center;
@@ -204,7 +207,6 @@ tr .line{
     }
 
     .btn-bar{
-        width: 250px;
         background-color: #333;
         color: #e0e0e0;
         border: none;
@@ -233,6 +235,7 @@ tr .line{
     
     .menu:hover .menu-list{
         display: flex;
+        flex-direction: column;
     }
 
     .container{
