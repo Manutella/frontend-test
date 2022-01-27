@@ -1,22 +1,34 @@
-*{
-    margin:0;
-    padding: 0%;
-    font-family: lato;
-}
-
 body{
     display: flex;
     flex-direction: column;
+    margin:0;
+    padding: 0;
+    font-family: 'lato';
 }
 
-nav{
+.nav-bar{
+/*Barra de navegação*/
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    height: 8vw;
+    height: 80px;
     width: 100%;
     background-color: #e0e0e0;
     
+}
+
+.logo{
+    margin: 0 20px;
+}
+
+a{
+/*Link 'Controle Financeiro'*/
+    text-decoration: none;
+    color: #333;
+}
+
+.title-bar{
+/*Titulo 'Controle Financeiro'*/
+    width: 100%;
 }
 
 ul{
@@ -24,6 +36,7 @@ ul{
     display: flex;
 }
 .mobile-menu, .close{
+/*menu hamburguer e botão 'X'*/
     cursor: pointer;
     display: none;
 }
@@ -35,6 +48,7 @@ ul{
     margin: 8px;
 }
 .divisor{
+
     width: 1px;
     height: 24px;
     background-color: #979797;
@@ -42,13 +56,14 @@ ul{
 }
 
 .btn-bar{
+/*Botões 'Cadastro...' e 'Limpar...' na barra de navegação*/
     display: flex;
     font-size: 16px;
     font-weight: 600;
     color: #333;
-    padding: 10px 16px;
-    background-color: white;
-    border: 1px solid white;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(81, 204, 77);
 }
 
 .btn-bar:hover{
@@ -56,52 +71,50 @@ ul{
     color: white;
 }
 
-.logo{
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    text-decoration: none;
-}
+
 
 .container{
+/*div que contém .transation-area e .extract-area */
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 15px 15px;
+    padding: 30px 0px;
 }
 
 .transation-area{
+/*formulário de nova transação*/
     display:flex;
     flex-direction: column;
     justify-content: space-around;
     width: 400px;
     height: 344px;
-    margin-right: 15px;
     border: 2px solid #979797;
     border-radius: 4px;
 }
 
 .transation-area .camp{
-    width: 100%;
+/*Campos do formulário*/
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-left: 15px;
 }
 
+
 .form{
+/*elementos dentro do formulario (inputs, labels, etc).*/
     width: 100%;
-    margin-left: 22px;
     padding: 5px 0;
 }
+
+
 
 h2{
     font-style: normal;
     font-weight: bold;
     line-height: 122%;
     text-align: center;
+    margin: 0;
 }
 
 
@@ -113,6 +126,7 @@ h2{
     border-radius: 4px;
 
 }
+
 
 
 #button{
@@ -140,32 +154,27 @@ select{
 .extract-area{
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
     width: 580px;
     height: 344px;
-    box-sizing: border-box;
-    border-radius: 4px;
+    margin-left: 20px;
 }
 
-p{
-    border-top:  1px solid #979797;
-    padding-bottom: 5px;
-}
-
-.num{
-    display: flex;
-    justify-content: flex-end;
-    text-align: center;
-    font-weight: 600;
+tr{
+    border: 1px solid #333 ;
 }
 
 
-@media(max-width:768px){
-    body{
-        overflow: hidden;
+@media(max-width:818px){
+
+    .nav-bar{
+        text-align: center;
     }
 
-    .nav-list{
+    .logo{
+        margin-left: 0;
+    }
+
+    .menu-list{
         position: fixed;
         flex-direction:column;
         justify-content:flex-start;
@@ -176,12 +185,13 @@ p{
         background-color: #333;
     }
 
-    .nav-list input{
-        width: 92%;
+    .menu-list input{
+        width: 92vh;
+        height: 400px;
         justify-content: end;
     } 
     
-    .nav-list{
+    .menu-list{
         display: none;
     }
 
@@ -208,12 +218,12 @@ p{
     }
 
 
-    .mobile-menu {
+    .mobile-menu, .close {
         display: block;
     }
 
     
-    .menu:hover .nav-list{
+    .menu:hover .menu-list{
         display: flex;
     }
 
@@ -223,31 +233,57 @@ p{
         justify-content: space-between;
     }
 
-    .container .transation-area{
-        width: 90%;
-        height: 20vh;
-        justify-content: space-around;
-        margin: 0;
+    .transation-area{
+        width: 92%;
+        height: 189px;
     }
+
+    .form{
+        width: 90%;
+        padding: 0;
+        align-items: center;
+    }
+
+    .camp{
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .short{
+        width: 33%;
+    }
+
+    
 
     .transation-area .camp{
         flex-direction: row;}
+    
+    .button{
+        display: flex;
+        justify-content: flex-end;
+    }
 
     #button{
-        width: 30%;
-        margin-left: 65%;
+        width: 200px;
+        height: 33px;
     }
 
     .extract-area{
         width: 90%;
         height: 60%;
         margin-top: 20px;
+        margin-left: 0;
     }
 }
 
-@media (max-width: 411px){
+@media (max-width: 444px){
 
-    .nav-list{
+    .logo{
+        margin-left: 10px;
+    }
+
+    .menu-list{
         width: 80%;
     }
 
@@ -265,6 +301,11 @@ p{
 
     .transation-area .camp{
         flex-direction: column;
+        margin: 0 15px;
+    }
+
+    .short{
+        width: 100%;
     }
 
     #button{
