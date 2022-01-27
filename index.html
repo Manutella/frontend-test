@@ -11,8 +11,8 @@
     <header>
         <nav class="nav-bar">
             
-            <div>
-        <a href="#"><img src="image/logo.png" alt="logo" class="logo"></a>
+            <div class="logo">
+                 <a href="#"><img src="image/logo.png" alt="logo" ></a>
             </div>
 
             <a href="#" class="title-bar"><h1>Controle Financeiro</h1></a>
@@ -20,13 +20,14 @@
             <div class="menu"> 
                 <ul class="menu-list">
                     
-                    <div class="close">X</div>
-                    
-                    <li><a href="#"class="btn-bar">Cadastro de transação</a> </li>
+                    <li><div class="close">X</div></li>
+                
                     
                     <div class="divisor"></div>
                     
-                    <li><a href="#" class="btn-bar">Limpar dados</a></li>
+                    <li><span class="btn-bar">Cadastro de Transações</span> </li>
+
+                    <li><span class="btn-bar">Limpar dados</span> </li>
                 </ul>
 
                 <div class="mobile-menu">
@@ -60,10 +61,13 @@
                     <label for="value">Valor:</label>
                     <input type="number" name="value" id="value" placeholder="R$0,00" required>
                 </div>
+
         </div>
+        
         <div class="button">
             <input type="submit" value="Adicionar transação"  id="button">
         </div>
+
         </form>
 
         <div class="extract-area">
@@ -71,30 +75,32 @@
            <table>
                <h2>Extrato de Transações</h2>
                <tr>
-                   <td></td>
-                   <td><strong>Mercadoria</strong></td>
-                   <td><strong>Valor</strong></td>
+                   <td class='underline line'></td>
+                   <td class='underline line'><strong>Mercadoria</strong></td>
+                   <td class='underline line'><strong>Valor</strong></td>
                </tr>
                <tr>
-                   <td>+</td>
-                   <td> Lorem ipsum dolor sit amet, consectetur</td>
-                   <td>R$12.999,99</td>
+                   <td class='underline line'>+</td>
+                   <td class='underline line'> Lorem ipsum dolor sit amet, consectetur</td>
+                   <td class='underline line'>R$12.999,99</td>
                </tr>
                <tr>
-                   <td>-</td>
-                   <td> Quis nostrud exercitation</td>
-                   <td>R$99.99</td>
+                   <td class='underline line'>-</td>
+                   <td class='underline line'> Quis nostrud exercitation</td>
+                   <td class='underline line'>R$99.99</td>
                </tr>
                <tr>
-                   <td>+</td>
-                   <td>
+                   <td class='underline line'>+</td>
+                   <td class='underline line'>
                         Lorem ipsum
                    </td>
-                   <td>R$9,99</td>
+                   <td class='underline line'>R$9,99</td>
                </tr>
-               <tr></tr>
                <tr>
-                   <td></td>
+                <td class='underline'></td><td class='underline'></td><td class='underline'></td>
+               </tr>
+               <tr>
+                    <td></td>
                    <td><strong>Total</strong></td>
                    <td><strong>R$12.909,99</strong></td>
                </tr>

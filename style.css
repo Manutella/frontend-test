@@ -103,7 +103,6 @@ ul{
 
 .form{
 /*elementos dentro do formulario (inputs, labels, etc).*/
-    width: 100%;
     padding: 5px 0;
 }
 
@@ -130,6 +129,7 @@ h2{
 
 
 #button{
+/*botão do formulario*/
     background-color: #333;
     color: white;
     border: 1px solid #333;
@@ -159,12 +159,20 @@ select{
     margin-left: 20px;
 }
 
-tr{
-    border: 1px solid #333 ;
+table{
+    margin-top: 20px;
+    padding: 20px;
 }
 
+tr .underline{
+    border-bottom: 1px solid #979797;
+}
 
-@media(max-width:818px){
+tr .line{
+    height: 34px;
+}
+
+@media(max-width:600px){
 
     .nav-bar{
         text-align: center;
@@ -185,7 +193,7 @@ tr{
         background-color: #333;
     }
 
-    .menu-list input{
+    .menu-list span{
         width: 92vh;
         height: 400px;
         justify-content: end;
@@ -234,30 +242,29 @@ tr{
     }
 
     .transation-area{
-        width: 92%;
+        width: 95%;
         height: 189px;
     }
 
     .form{
-        width: 90%;
         padding: 0;
-        align-items: center;
-    }
-
-    .camp{
-        display: flex;
-        justify-content: center;
-        margin-left: 0;
-    }
-
-    .short{
-        width: 33%;
     }
 
     
+    .long{
+        width: 60%;
+    }
+    
+    .short{
+        width: 20%;
+    }
 
     .transation-area .camp{
-        flex-direction: row;}
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
     
     .button{
         display: flex;
@@ -270,17 +277,17 @@ tr{
     }
 
     .extract-area{
-        width: 90%;
+        width: 95%;
         height: 60%;
-        margin-top: 20px;
+        margin-top: 70px;
         margin-left: 0;
     }
 }
 
-@media (max-width: 444px){
+@media (max-width: 500px){
 
     .logo{
-        margin-left: 10px;
+        margin-left: 15px;
     }
 
     .menu-list{
@@ -288,8 +295,6 @@ tr{
     }
 
     .container .transation-area{
-        flex-direction: column;
-        justify-content: space-around;
         width: 100%;
         height: 50%;
         border: none;
@@ -301,18 +306,28 @@ tr{
 
     .transation-area .camp{
         flex-direction: column;
-        margin: 0 15px;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0 10px;
     }
 
-    .short{
+    .form{
         width: 100%;
+        padding: 10px 0;
+
+    }
+
+    .button{
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%
+
     }
 
     #button{
         
-        margin: 10px 10px;
         height: 32px;
-        width: 92%;
+        width: 100%;
     }
 
 
