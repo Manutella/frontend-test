@@ -3,11 +3,15 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: 'Lato';
+    src: url(font/Lato-Regular.ttf);
+}
+
 body{
     display: flex;
     flex-direction: column;
-    
-    
+    font-family: 'Lato';
 }
 
 .nav-bar{
@@ -19,7 +23,6 @@ body{
     width: 100%;
     background-color: #e0e0e0;
     padding-right: 30px;
-    
 }
 
 .logo{
@@ -54,7 +57,6 @@ ul{
     margin: 8px;
 }
 .divisor{
-
     width: 1px;
     height: 24px;
     background-color: #979797;
@@ -128,14 +130,13 @@ h2{
     margin: 0;
 }
 
-
 .form input, select{
+/*Inputs e select do formulario*/
     height: 32px;
     width: 92%;
     border: 1px solid #979797;
     box-sizing: border-box;
     border-radius: 4px;
-
 }
 
 
@@ -160,8 +161,6 @@ h2{
 select{
     cursor: pointer;
 }
-
-
 
 .extract-area{
     display:flex;
@@ -211,7 +210,6 @@ tr .line{
     .menu-list{
         display: none;
     }
-
 
     .btn-bar{
         background-color: #333;
@@ -267,15 +265,17 @@ tr .line{
         width: 60%;
     }
     
+    .long #merch-name{
+        display: flex;
+        justify-content: center;
+    }
+
     .short{
         width: 20%;
     }
 
     .transation-area .camp{
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0;
     }
     
     .button{
