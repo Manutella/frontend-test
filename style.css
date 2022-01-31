@@ -331,7 +331,10 @@ tr .line{
     .form{
         width: 100%;
         padding: 10px 0;
+    }
 
+    .long #merch-name{
+        width: 92%;
     }
 
     .button{
