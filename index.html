@@ -11,7 +11,7 @@
 <body>
     <header>
         <nav class="nav-bar">
-            
+        <!--Barra de navegação-->
             <div class="logo">
                  <a href="#"><img src="image/logo.png" alt="logo" ></a>
             </div>
@@ -19,6 +19,8 @@
             <a href="#" class="title-bar"><h1>Controle Financeiro</h1></a>
             
             <div class="menu"> 
+            <!--Lista de Botões na barra de navegação-->
+
                 <ul class="menu-list">
                     
                     <li><div class="close">X</div></li>
@@ -27,7 +29,8 @@
 
                     <li><div class="divisor"></div></li>
 
-                    <li><button class="btn-bar btn-short">Limpar dados</button> </li>
+                    <li><button class="btn-bar btn-short">Limpar dados</button onclick="clearDate()">
+                    <!--botão limpar dados--></li>
                 </ul>
 
                 <div class="mobile-menu">
@@ -41,72 +44,60 @@
 
     <div class="container">
         <form class="transation-area">
-
+        <!--Formulário de Nova Transação-->
 
             <h2>Nova transação</h2>
 
             <div class="camp">
+
                 <div class="form short">
                     <label for="trans-select">Tipo de transação:</label>
                     <select name="trans-select">
                     <option value="1">Compra</option>
                     <option value="2">Venda</option>
                     </select>
+                    <!--select tipo de transação-->
                 </div>
+
                 <div class="form long">
                     <label for="merch-name" >Nome da mercadoria:</label>
                     <input type="text" name="merch-name" required id="merch-name">
+                    <!--input Nome da marcadoria-->
                 </div>
-                <div class="form short value">
+
+                <div class="form short valuation">
                     <label for="value">Valor:</label>
-                    <input type="number" name="value" id="value" placeholder="R$0,00" required>
+                    <input type="number" name="value" id="valuation" placeholder="R$0,00" required>
+                    <!--input valor-->
                 </div>
 
         </div>
         
         <div class="button">
-            <input type="submit" value="Adicionar transação"  id="button">
+            <input type="submit" value="Adicionar transação"  id="button" onclick="addTrans()">
+            <!--botão adiocionar transação-->
         </div>
 
         </form>
 
         <div class="extract-area">
-        
+        <!--área do Extrato de Transações-->
+
            <table>
                <h2>Extrato de Transações</h2>
-               <tr>
-                   <td class='underline line'></td>
-                   <td class='underline line'><strong>Mercadoria</strong></td>
-                   <td class='underline line'><strong>Valor</strong></td>
-               </tr>
-               <tr>
-                   <td class='underline line'>+</td>
-                   <td class='underline line'> Lorem ipsum dolor sit amet, consectetur</td>
-                   <td class='underline line'>R$12.999,99</td>
-               </tr>
-               <tr>
-                   <td class='underline line'>-</td>
-                   <td class='underline line'> Quis nostrud exercitation</td>
-                   <td class='underline line'>R$99.99</td>
-               </tr>
-               <tr>
-                   <td class='underline line'>+</td>
-                   <td class='underline line'>Lorem ipsum</td>
-                   <td class='underline line'>R$9,99</td>
-               </tr>
-               <tr>
-                <td class='underline'></td>
-                <td class='underline'></td>
-                <td class='underline'></td>
-               </tr>
-               <tr>
-                    <td></td>
-                   <td><strong>Total</strong></td>
-                   <td><strong>R$12.909,99</strong></td>
-               </tr>
+               <thead>
+                   <th class="underline center">o</th>
+                   <th class="underline left">Mercadoria</th>
+                   <th class="underline right">Valor</th>
+               </thead>
+
+               <tbody class="tbody underline">
+                  
+               </tbody>
            </table>
         </div>
     </div>
     
 </body>
+<script src="script.js"></script>
 </html>
