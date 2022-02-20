@@ -11,15 +11,18 @@
 <body>
     <header>
         <nav class="nav-bar">
+        <!--Barra de navegação-->
             
             <div class="logo">
                  <a href="#"><img src="image/logo.png" alt="logo" ></a>
+                 <!--Imagem Logo-->
             </div>
 
             <a href="#" class="title-bar"><h1>Controle Financeiro</h1></a>
             
             <div class="menu"> 
                 <ul class="menu-list">
+                <!--Lista de botões do menu-->
                     
                     <li><div class="close">X</div></li>
                 
@@ -34,6 +37,7 @@
                     <div class="line1"  ></div>
                     <div class="line2"  ></div>
                     <div class="line3"  ></div>
+                    <!--Menu sanduiche do mobile-->
                 </div> 
             </div>                                           
         </nav>
@@ -41,38 +45,48 @@
 
     <div class="container">
         <form class="transation-area">
-
+        <!-- área de transação--> 
 
             <h2>Nova transação</h2>
 
             <div class="camp">
                 <div class="form short">
                     <label for="trans-select">Tipo de transação:</label>
-                    <select name="trans-select">
+                    <select name="trans-select" id="trans-select">
                     <option value="1">Compra</option>
                     <option value="2">Venda</option>
                     </select>
-                </div>
+                    <!-- select de transação-->
+                </div> 
+
                 <div class="form long">
                     <label for="merch-name" >Nome da mercadoria:</label>
                     <input type="text" name="merch-name" required id="merch-name">
+                    <!-- input "Nome de marcadoria"--> 
                 </div>
+
                 <div class="form short value">
                     <label for="value">Valor:</label>
-                    <input type="number" name="value" id="value" placeholder="R$0,00" required>
+                    <input type="number" name="value" id="valuation" placeholder="R$0,00" required>
+                    <!-- input "valor"--> 
                 </div>
 
         </div>
         
         <div class="button">
-            <input type="submit" value="Adicionar transação"  id="button">
+            <input type="button" value="Adicionar transação"  id="button" onclick="add()">
+            
+            <!--Botão "Adicionar transação"-->
         </div>
 
         </form>
 
         <div class="extract-area">
+        <!--Area de "extrato de transações"-->
         
            <table>
+            <!--Tabela do extrato-->
+
                <h2>Extrato de Transações</h2>
                <tr>
                    <td class='underline line'></td>
@@ -81,7 +95,7 @@
                </tr>
                <tr>
                    <td class='underline line'>+</td>
-                   <td class='underline line'> Lorem ipsum dolor sit amet, consectetur</td>
+                   <td class='underline line' id='res'> Lorem ipsum dolor sit amet, consectetur </td>
                    <td class='underline line'>R$12.999,99</td>
                </tr>
                <tr>
@@ -109,4 +123,5 @@
     </div>
     
 </body>
+<script src="script.js"></script>
 </html>
