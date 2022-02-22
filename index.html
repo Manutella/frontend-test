@@ -52,7 +52,7 @@
 
                 <div class="form short">
                     <label for="trans-select">Tipo de transação:</label>
-                    <select name="trans-select">
+                    <select name="trans-select" id="trans-select">
                     <option value="1">Compra</option>
                     <option value="2">Venda</option>
                     </select>
@@ -74,7 +74,7 @@
         </div>
         
         <div class="button">
-            <input type="submit" value="Adicionar transação"  id="button" onclick="addTrans()">
+           <button id="button" onclick="Trans()">Adiocionar transação</button>
             <!--botão adiocionar transação-->
         </div>
 
@@ -86,13 +86,15 @@
            <table>
                <h2>Extrato de Transações</h2>
                <thead>
-                   <th class="underline center">o</th>
+                   <th class="underline center"></th>
                    <th class="underline left">Mercadoria</th>
                    <th class="underline right">Valor</th>
                </thead>
 
-               <tbody class="tbody underline">
-                  
+               <tbody class="tbody">
+                  <td></td>
+                  <td></td>
+                  <td></td>
                </tbody>
            </table>
         </div>
