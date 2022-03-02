@@ -31,7 +31,7 @@
 
                     <li><div class="divisor"></div></li>
 
-                    <li><button class="btn-bar btn-short">Limpar dados</button onclick="clearDate()">
+                    <li><button class="btn-bar btn-short" id="refresh" onclick="limpar(trans)">Limpar dados</button >
                     <!--botão limpar dados--></li>
                 </ul>
 
@@ -46,47 +46,51 @@
     </header>
 
     <div class="container">
-        <form class="transation-area">
+        <div class="transation-area">
         <!-- área de transação--> 
+            <form id="form" onsubmit="testForm(event);" >
+                <h2>Nova transação</h2>
 
-            <h2>Nova transação</h2>
+                <div class="camp">
 
-            <div class="camp">
+                    <div class="form short">
+                        <!-- select de transação-->
+                        <label for="trans-select">Tipo de transação:</label>
+                        <select name="trans-select" id="select">
+                        <option value="true" id="buy">Compra</option>
+                        <option value="false" id="sale">Venda</option>
+                        </select>
+                        
+                    </div> 
 
-                <div class="form short">
-                    <label for="trans-select">Tipo de transação:</label>
-                    <select name="trans-select" id="trans-select">
-                    <option value="1">Compra</option>
-                    <option value="2">Venda</option>
-                    </select>
-                    <!-- select de transação-->
-                </div> 
+                    <div class="form long">
+                        <!--input Nome da marcadoria-->
+                        <label for="merch-name" >Nome da mercadoria:</label>
+                        <input type="text" name="merch-name" required type ="text" id="merch">
+                        
+                    </div>
 
-                <div class="form long">
-                    <label for="merch-name" >Nome da mercadoria:</label>
-                    <input type="text" name="merch-name" required id="merch-name">
-                    <!--input Nome da marcadoria-->
-                </div>
-
-                <div class="form short valuation">
-                    <label for="value">Valor:</label>
-                    <input type="number" name="value" id="valuation" placeholder="R$0,00" required>
-                    <!--input valor-->
-                </div>
-
+                    <div class="form short">
+                        <!--input valor-->
+                        <label for="value">Valor:</label>
+                        <input type="text" name="value" id="price" onKeyUp="mascaraMoeda(this, event)" placeholder="R$ 0,00"  >
+                        
+                    </div>
+            
+           
         </div>
         
         <div class="button">
-           <button id="button" onclick="Trans()">Adiocionar transação</button>
-            <!--botão adiocionar transação-->
+           <button type="submit" id="button">Adicionar transação</button>
+            <!--botão adicionar transação-->
         </div>
-
         </form>
+    </div>
 
         <div class="extract-area">
         <!--área do Extrato de Transações-->
 
-           <table>
+           <table class="extract">
             <!--Tabela do extrato-->
 
                <h2>Extrato de Transações</h2>
@@ -96,15 +100,18 @@
                    <th class="underline right">Valor</th>
                </thead>
 
-               <tbody class="tbody">
-                  <td></td>
-                  <td></td>
-                  <td></td>
+               <tbody id="tbody">
+                
+                <tr class="line"></tr>
+
+               
                </tbody>
            </table>
         </div>
     </div>
     
 </body>
+
 <script src="script.js"></script>
+
 </html>

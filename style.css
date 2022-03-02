@@ -111,9 +111,11 @@ ul{
     margin-left: 15px;
 }
 
+
 .form{
 /*elementos dentro do formulario (inputs, labels, etc).*/
     padding: 5px 0;
+   
 }
 
 
@@ -145,7 +147,8 @@ h2{
     border-radius: 4px;
     margin: 0 15px;
     height: 32px;
-    width: 92%;
+    width: 89%;
+    margin-top: 15px;
 }
 
 #button:hover{
@@ -180,18 +183,22 @@ table th{
 }
 .underline{
     border-bottom: 1px solid #979797;
+    height: 2em;
 }
 
 .left{
     text-align: left;
+    width: 40%;
 }
 
 .right{
     text-align: right;
+    width: 50%;
 }
 
 .center{
     text-align: center;
+    width: 10%;
 }
 @media(max-width:1100px){
 
@@ -272,16 +279,19 @@ table th{
         height: 189px;
     }
 
+
     .form{
         padding: 0;
     }
 
-    
+    form h2{
+        margin-bottom: 10px;
+    }
     .long{
         width: 60%;
     }
     
-    .long #merch-name{
+    .long #merch{
         display: flex;
         justify-content: center;
         width: 97%;
@@ -303,6 +313,7 @@ table th{
     #button{
         width: 200px;
         height: 33px;
+        margin-top: 10px;
     }
 
     .extract-area{
@@ -345,7 +356,7 @@ table th{
         padding: 10px 0;
     }
 
-    .long #merch-name{
+    .long #merch{
         width: 92%;
     }
 
@@ -360,6 +371,7 @@ table th{
         
         height: 32px;
         width: 100%;
+        margin-top: 0 12px;                                                                  
     }
 
 
