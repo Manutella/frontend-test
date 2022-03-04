@@ -1,14 +1,11 @@
-  function testForm(e){
+
+function testForm(e){
     //evento evita da pagina recarregar
     //e.preventDefault(); 
     
     
     // Validação no input mercadoria, para não aceitar numeros.
-    var mercadoria = /[^a-z A-Z]/g
-    if (mercadoria.test(e.target.elements['merch'].value)){
-      alert('mercadoria inválida')
-       return false
-    }
+ 
 
     //adicionando item no localstorage
   var transacaoVaga = localStorage.getItem('transacao')
@@ -41,7 +38,7 @@ function mascaraMoeda(campo,evento){
     var tecla = (!evento) ? window.event.keyCode : evento.which;
     var valor  =  campo.value.replace(/[^\d]+/gi,'').reverse();
     var resultado  = "";
-    var mascara = "R$ ##.###.###,##".reverse();
+    var mascara = "##.###.###,##".reverse();
     
     for (var x=0, y=0; x<mascara.length && y<valor.length;) {
       if (mascara.charAt(x) != '#') {
@@ -67,10 +64,10 @@ function extratoTransacao(){
       var transacao = []
     }
       
-
+     //zerando html
     //looping da lista
     for( trans in transacao){
-      
+      document.querySelector('table.extract tbody').innerHTML += '';
       document.querySelector('table.extract tbody').innerHTML += ` 
           <tr class="conteudo-dinamico">
           <td class="underline center">
@@ -85,12 +82,15 @@ function extratoTransacao(){
 
         </tr>
     `
+    
+    
     }
 
     
-
+    
 
  //segunda linha vazia acima do total
+ 
  document.querySelector('table.extract tbody ').innerHTML += `<tr>
  <td style = "border-bottom: 1px solid #979797" > </td>
  <td style = "border-bottom: 1px solid #979797" > </td>
@@ -98,8 +98,16 @@ function extratoTransacao(){
  
  </tr>`
 
+ document.querySelector('table.extract tbody ').innerHTML +=`<tr>
+ <td > </td>
+ <td > <strong>Total</strong> </td>
+ <td class=" right" > <strong>R$ 12.909,99</strong></td>
+</tr>`
+ 
+}  
 
-}
+
+
 //limpar dados 
 function limpar(){
   var caixaDialogo = confirm("Esta ação apagará todos os dados, tem certeza de que quer prosseguir?");
@@ -111,6 +119,7 @@ if (caixaDialogo) {
 else {
     return false;
 }};
+
 
 
 extratoTransacao()
